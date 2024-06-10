@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!--<?import com.gluonhq.charm.glisten.control.Icon?>-->
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.controllers.MainWindowController">
+   <children>
+      <SplitPane layoutX="-3.0" layoutY="53.0" prefHeight="626.0" prefWidth="1083.0">
+        <items>
+          <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="619.0" prefWidth="1082.0">
+               <children>
+                  <HBox fx:id="hbox" layoutX="-4.0" layoutY="-2.0" prefHeight="626.0" prefWidth="1090.0">
+                     <children>
+                        <VBox alignment="TOP_CENTER" prefHeight="627.0" prefWidth="206.0" style="-fx-background-color: #053730;">
+                           <children>
+                              <ImageView fitHeight="163.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@imgs/logo4-removebg-preview.png" />
+                                 </image>
+                              </ImageView>
+                              <HBox prefHeight="33.0" prefWidth="206.0" />
+                              <ToggleButton fx:id="dashboard" mnemonicParsing="false" prefHeight="70.0" prefWidth="204.0" styleClass="side-bar-btn" stylesheets="@css/des.css" textFill="#e1a6a6">
+                                 <font>
+                                    <Font name="System Bold Italic" size="24.0" />
+                                 </font>
+                                 <graphic>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fx:id="imgview" fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" style="-fx-opacity: 1;" styleClass="image1-view">
+                                             <HBox.margin>
+                                                <Insets left="5.0" right="5.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@imgs/dashboard.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label styleClass="label-side-bar" text="Dashboard">
+                                             <font>
+                                                <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+                                             </font>
+                                             <textFill>
+                                                <LinearGradient endX="1.0" endY="1.0">
+                                                   <stops>
+                                                      <Stop>
+                                                         <color>
+                                                            <Color />
+                                                         </color>
+                                                      </Stop>
+                                                      <Stop offset="1.0">
+                                                         <color>
+                                                            <Color red="1.0" green="1.0" blue="1.0" />
+                                                         </color>
+                                                      </Stop>
+                                                   </stops>
+                                                </LinearGradient>
+                                             </textFill>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="table" mnemonicParsing="false" prefHeight="65.6" prefWidth="204.0" styleClass="side-bar-btn" stylesheets="@css/des.css">
+                                 <font>
+                                    <Font name="Berlin Sans FB Demi Bold" size="12.0" />
+                                 </font>
+                                 <graphic>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" styleClass="image1-view">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="5.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@imgs/table.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label styleClass="label-side-bar" text="Table" textFill="#f0e7e6">
+                                             <font>
+                                                <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </ToggleButton>
+                              <ToggleButton fx:id="edit" mnemonicParsing="false" prefHeight="58.0" prefWidth="204.0" styleClass="side-bar-btn" stylesheets="@css/des.css">
+                                 <graphic>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" styleClass="image1-view">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="5.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@imgs/edit.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label styleClass="label-side-bar" text="Edit" textFill="#f0e7e6">
+                                             <font>
+                                                <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic></ToggleButton>
+                              <ToggleButton fx:id="statistic" mnemonicParsing="false" prefHeight="62.6" prefWidth="204.0" styleClass="side-bar-btn" stylesheets="@css/des.css">
+                                 <font>
+                                    <Font name="System Bold" size="18.0" />
+                                 </font>
+                                 <graphic>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true" styleClass="image1-view">
+                                             <HBox.margin>
+                                                <Insets left="12.0" right="5.0" />
+                                             </HBox.margin>
+                                             <image>
+                                                <Image url="@imgs/statistic.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label styleClass="label-side-bar" text="Statistic" textFill="#f0e7e6">
+                                             <font>
+                                                <Font name="Berlin Sans FB Demi Bold" size="22.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </ToggleButton>
+                              <HBox prefHeight="107.0" prefWidth="206.0" />
+                              <ToggleButton fx:id="logoutBtn" mnemonicParsing="false" prefHeight="66.0" prefWidth="206.0" styleClass="side-bar-btn" stylesheets="@css/des.css">
+                                 <graphic>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+                                             <HBox.margin>
+                                                <Insets left="15.0" right="5.0" />
+                                             </HBox.margin>
+                                          </ImageView>
+                                          <Label styleClass="label-side-bar" text="Log out">
+                                             <font>
+                                                <Font name="Berlin Sans FB Demi Bold" size="24.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </ToggleButton>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </AnchorPane>
+        </items>
+      </SplitPane>
+      <Label layoutY="-1.0" prefHeight="44.0" prefWidth="1080.0" style="-fx-background-color: #053730;" text="Inventory Product Program" textFill="#f2e6e6">
+         <font>
+            <Font name="System Bold" size="37.0" />
+         </font>
+         <padding>
+            <Insets left="10.0" />
+         </padding>
+      </Label>
+      <Label fx:id="nameAcc" layoutX="873.0" layoutY="13.0" textFill="#f2e6e6">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <ImageView fx:id="imageAcc" fitHeight="50.0" fitWidth="50.0" layoutX="1000.0" layoutY="2.0" pickOnBounds="true" preserveRatio="true" />
+   </children>
+</AnchorPane>

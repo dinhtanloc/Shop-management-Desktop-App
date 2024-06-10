@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.control.ButtonBar?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Pagination?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="881.0" styleClass="gradient-background" stylesheets="@css/des.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.controllers.TableWindowController">
+   <children>
+      <HBox layoutX="-1.0" prefHeight="567.0" prefWidth="881.0" rotate="-0.05">
+         <children>
+            <TabPane fx:id="tab_table" prefHeight="567.0" prefWidth="882.0">
+               <tabs>
+                  <Tab fx:id="Category" closable="false" text="Category">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="508.0" prefWidth="881.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="885.0" styleClass="label2" text="PRODUCT DETAIL LIST">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="65.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Separator prefHeight="26.0" prefWidth="496.0" />
+                                    <HBox prefHeight="27.0" prefWidth="790.0">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" />
+                                       </VBox.margin>
+                                       <children>
+                                          <TextField fx:id="searchCategory" prefHeight="27.0" prefWidth="575.0" promptText="Search">
+                                             <HBox.margin>
+                                                <Insets left="65.0" right="30.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <ComboBox fx:id="typeCheck" prefHeight="26.0" prefWidth="138.0" promptText="Type check" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="303.0" prefWidth="882.0">
+                                       <children>
+                                          <TableView fx:id="CategoryTableView" prefHeight="325.0" prefWidth="751.0">
+                                             <columns>
+                                                <TableColumn fx:id="ProID" prefWidth="98.4377031326294" text="Product ID" />
+                                                <TableColumn fx:id="ProImage" prefWidth="188.80421447753906" text="Image" />
+                                                <TableColumn fx:id="ProType" prefWidth="146.39443969726562" text="Type" />
+                                                <TableColumn fx:id="Prodes" prefWidth="148.81674194335938" text="Description" />
+                                                <TableColumn fx:id="Proprice" prefWidth="152.84332275390625" text="Price" />
+                                             </columns>
+                                             <HBox.margin>
+                                                <Insets left="65.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <Pagination fx:id="pagination_C" prefHeight="117.0" prefWidth="882.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="Inventorylst" closable="false" text="Inventory List">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <VBox prefHeight="510.0" prefWidth="881.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="894.0" styleClass="label2" text="INVENTORY INSPECTION">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="15.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Separator prefHeight="26.0" prefWidth="496.0" />
+                                    <TextField fx:id="searchInventory" prefHeight="27.0" prefWidth="853.0" promptText="Search">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="15.0" right="10.0" />
+                                       </VBox.margin></TextField>
+                                    <HBox prefHeight="287.0" prefWidth="855.0">
+                                       <children>
+                                          <TableView fx:id="InventoryTableView" prefHeight="295.0" prefWidth="858.0">
+                                             <columns>
+                                                <TableColumn fx:id="InventID" prefWidth="127.23628491163254" text="Product ID" />
+                                                <TableColumn fx:id="InventType" prefWidth="100.80558776855469" text="Type" />
+                                                <TableColumn fx:id="InventDes" prefWidth="242.4349822998047" text="Description" />
+                                                <TableColumn fx:id="InventQty" prefWidth="132.80072021484375" text="Quantity" />
+                                                <TableColumn fx:id="Inventcost" prefWidth="231.2410888671875" text="Total cost" />
+                                             </columns>
+                                             <HBox.margin>
+                                                <Insets left="10.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <Pagination fx:id="pagination_I" prefHeight="135.0" prefWidth="882.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                  <Tab fx:id="Orderlst" closable="false" text="Order List">
+                     <content>
+                        <HBox prefHeight="496.0" prefWidth="855.0" rotate="0.05">
+                           <children>
+                              <VBox prefHeight="539.0" prefWidth="884.0">
+                                 <children>
+                                    <Label prefHeight="27.0" prefWidth="857.0" styleClass="label2" text="ORDER HISTORY LIST">
+                                       <font>
+                                          <Font size="18.0" />
+                                       </font>
+                                       <VBox.margin>
+                                          <Insets left="25.0" />
+                                       </VBox.margin>
+                                    </Label>
+                                    <Separator prefHeight="26.0" prefWidth="496.0" />
+                                    <TextField fx:id="searchOrder" prefHeight="26.0" prefWidth="839.0" promptText="Search">
+                                       <VBox.margin>
+                                          <Insets bottom="10.0" left="20.0" right="11.0" />
+                                       </VBox.margin></TextField>
+                                    <HBox prefHeight="305.0" prefWidth="882.0">
+                                       <children>
+                                          <TableView fx:id="OrderTableView" prefHeight="325.0" prefWidth="848.0" rotate="-0.05">
+                                            <columns>
+                                              <TableColumn fx:id="Order_ID" prefWidth="50.44116020202637" text="OrderID" />
+                                              <TableColumn fx:id="Order_Date" prefWidth="108.04117584228516" text="OrderDate" />
+                                                <TableColumn fx:id="Order_des" minWidth="0.0" prefWidth="96.000732421875" text="Description" />
+                                                <TableColumn fx:id="Order_Qty" prefWidth="59.2447509765625" text="Quantity" />
+                                                <TableColumn fx:id="Order_unit" prefWidth="87.237060546875" text="Unitcost" />
+                                                <TableColumn fx:id="Order_total" minWidth="0.0" prefWidth="94.44259643554688" text="Totalcost" />
+                                                <TableColumn fx:id="Order_name" minWidth="6.39788818359375" prefWidth="98.44192504882812" text="Name" />
+                                                <TableColumn fx:id="Order_number" prefWidth="102.40008544921875" text="PhoneNumber" />
+                                                <TableColumn fx:id="Order_sale" minWidth="4.79998779296875" prefWidth="70.399169921875" text="Saleperson" />
+                                                <TableColumn fx:id="delcol" minWidth="0.0" prefWidth="54.44189453125" />
+                                            </columns>
+                                             <HBox.margin>
+                                                <Insets left="20.0" />
+                                             </HBox.margin>
+                                          </TableView>
+                                       </children>
+                                    </HBox>
+                                    <Pagination fx:id="pagination_O" prefHeight="117.0" prefWidth="882.0" />
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </content>
+                  </Tab>
+               </tabs>
+               <rotationAxis>
+                  <Point3D />
+               </rotationAxis>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </TabPane>
+         </children>
+      </HBox>
+      <ButtonBar layoutX="227.0" layoutY="560.0" prefHeight="54.0" prefWidth="425.0">
+         <buttons>
+            <ToggleButton fx:id="categoryBtn" mnemonicParsing="false" stylesheets="@css/style.css" text="Category" />
+            <ToggleButton fx:id="InventoryBtn" mnemonicParsing="false" stylesheets="@css/style.css" text="Inventory" />
+            <ToggleButton fx:id="OrderDetailBtn" mnemonicParsing="false" prefHeight="40.0" stylesheets="@css/style.css" text="Order Detail" />
+         </buttons>
+      </ButtonBar>
+   </children>
+</AnchorPane>

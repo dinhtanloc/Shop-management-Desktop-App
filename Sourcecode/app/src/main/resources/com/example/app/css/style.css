@@ -1,0 +1,177 @@
+.gradient-background{
+    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #b2cd98,#606060);*/
+    -fx-background-color: #FFF4E9;
+}
+.box-info{
+    -fx-background-color: #acc0a0;
+    -fx-background-radius: 10;
+}
+.box-info:hover{
+    -fx-background-color: #ded8d8;  // Màu nền khi di chuột qua
+-fx-border-color:  #f5b042;      // Màu viền khi di chuột qua
+}
+/*tab design*/
+.tab{
+    -fx-background-color: #54675C;
+    -fx-pref-height: 50;
+    -fx-pref-width: 440;
+    -fx-font-size: 20px; /* Điều chỉnh kích thước chữ cái theo nhu cầu */
+    -fx-font-weight: bold; /* Đặt font chữ in đậm (tuỳ chọn) */
+    -fx-padding: 0 10 10px 10; /* Khoảng cách dưới TabPane */
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /*border-bottom: 20px solid #ccc;*/
+}
+.tab-header-background{
+    -fx-background-color: #54675C;
+}
+
+.tab:selected{
+    -fx-border-color: #d5eee0;
+    -fx-border-width: 0 0 3px 0;
+}
+
+/* Màu nền và màu chữ cho mỗi tab */
+/*.tab-pane .tab {*/
+/*    -fx-background-color: #ffcc66; !* Màu cam nhạt *!*/
+/*    -fx-text-fill: #333333; !* Màu chữ đậm *!*/
+/*}*/
+
+/* Màu nền và màu chữ cho tab đang được chọn */
+.tab:selected .tab-label {
+    /*-fx-background-color: #b5ea15; !* Màu cam *!*/
+    -fx-text-fill: #ffffff; /* Màu chữ trắng */
+    -fx-label-padding: 0,0,60px,0;
+
+
+}
+.tab-label {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-label-padding: 0,0,20px,0;
+
+    /*-fx-label-padding: 20px ;*/
+}
+
+/* Hiệu ứng viền bóng đổ và biến dạng */
+.hbox{
+    /* Hiệu ứng viền bóng đổ và biến dạng */
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.7), 10, 0.2, 0, 0);
+    -fx-border-color: linear-gradient(to bottom, #a1a1a1, #606060);
+    -fx-border-width: 2;
+    -fx-border-insets: 5;
+    -fx-border-radius: 10;
+    -fx-background-color: linear-gradient(to bottom, #996633, #663300);
+    -fx-background-radius: 10;
+    -fx-background-insets: 0, 1, 2;
+    -fx-text-fill: white;
+
+}
+
+.button{
+    -fx-font-size: 18px; /* Điều chỉnh kích thước chữ cái theo nhu cầu */
+    -fx-font-weight: bold; /* Đặt font chữ in đậm */
+    -fx-content-display: top;
+    -fx-alignment: center;
+
+}
+
+.toggle-button {
+    -fx-font-size: 18px; /* Điều chỉnh kích thước chữ cái theo nhu cầu */
+    -fx-font-weight: bold; /* Đặt font chữ in đậm */
+    -fx-content-display: top;
+    -fx-text-fill: #c9c7c7;
+    -fx-alignment: center;
+    -fx-background-color: #829168;
+    -fx-border-radius: 10px;
+}
+.toggle-button:hover{
+    -fx-background-color: #7f837c;
+    -fx-text-fill: #e5d9d9;
+
+}
+.toggle-button:selected{
+    -fx-font-size: 20px; /* Điều chỉnh kích thước chữ cái theo nhu cầu */
+    -fx-font-weight: bold; /* Đặt font chữ in đậm */
+    -fx-content-display: top;
+    -fx-text-fill: #f5f1f1;
+    -fx-alignment: center;
+    -fx-background-color: #d3dcd2;
+}
+
+
+
+
+.hidden {
+    -fx-max-width: 0;
+    -fx-pref-width: 0;
+    -fx-opacity: 0;
+    -fx-visibility: hidden;
+}
+
+
+.side-bar-btn:hover{
+    -fx-background-color: #527820;
+
+
+}
+.side-bar-btn:hover .label-side-bar{
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: White;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font: "Berlin Sans FB Demi", sans-serif;
+
+}
+.slide-bar-btn:hover .image1-view{
+    -fx-opacity: 0.5;
+
+}
+
+.side-bar-btn:hover .icon-side-bar{
+    -fx-fill: White;
+}
+.side-bar-btn:selected .label-side-bar{
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: White;
+    /*-fx-font-weight: bold;*/
+
+}
+.side-bar-btn:selected .icon-side-bar{
+    -fx-fill: White;
+}
+.side-bar-btn:selected{
+    -fx-background-color: rgba(255, 255, 255, 0.18);
+    /*-fx-font-weight: bold;*/
+    -fx-text-fill: white;
+}
+/*.default-color0.chart-pie{-fx-pie-color:transparent;}*/
+/*.default-color1.chart-pie{-fx-pie-color:transparent;}*/
+/*.default-color2.chart-pie{-fx-pie-color:transparent;}*/
+/*.default-color3.chart-pie{-fx-pie-color:transparent;}*/
+/*.default-color4.chart-pie                                                                                                                                                                  {-fx-pie-color:transparent;}*/
+/*.default-color5.chart-pie{-fx-pie-color:transparent;}*/
+/*.default-color6.chart-pie{-fx-pie-color:transparent;}*/
+/*.default-color7.chart-pie{-fx-pie-color:transparent;}*/
+
+.chart-pie-label{
+    -fx-fill: #66805e;
+    -fx-stroke: #134f1c;
+    -fx-font-size: 12;
+}
+.chart-pie-title{
+    -fx-font-size: 12;
+}
+
+
+
+
+
+
+
+
+
+
+

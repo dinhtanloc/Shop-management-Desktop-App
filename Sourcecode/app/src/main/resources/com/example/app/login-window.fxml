@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1080.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.controllers.LoginWindowController">
+   <children>
+      <BorderPane prefHeight="680.0" prefWidth="1085.0">
+         <right>
+            <VBox alignment="CENTER" prefHeight="469.0" prefWidth="326.0" style="-fx-background-position: up;" styleClass="vbox_background_right" stylesheets="@css/loginPage.css" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="231.0" fitWidth="271.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/logo4-removebg-preview.png" />
+                     </image>
+                  </ImageView>
+                  <Label alignment="CENTER" prefHeight="18.0" prefWidth="326.0" text="For healthy, green world" textFill="#e4941bf0">
+                     <font>
+                        <Font name="Ebrima Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER" prefHeight="66.0" prefWidth="326.0">
+                     <children>
+                        <Label alignment="BOTTOM_CENTER" prefHeight="27.0" prefWidth="106.0" text="Username  ">
+                           <textFill>
+                              <LinearGradient endX="1.0" endY="1.0">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color red="0.7451851963996887" green="0.800000011920929" blue="0.6903703808784485" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="0.7450980544090271" green="0.800000011920929" blue="0.6901960968971252" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </LinearGradient>
+                           </textFill>
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="usninput" prefHeight="29.0" prefWidth="170.0" style="-fx-background-radius: 50;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="41.0" prefWidth="326.0">
+                     <children>
+                        <Label alignment="CENTER" prefHeight="30.0" prefWidth="113.0" text="Password    " textFill="#beccb1">
+                           <font>
+                              <Font name="System Bold" size="18.0" />
+                           </font>
+                        </Label>
+                        <PasswordField fx:id="pssinput" prefHeight="29.0" prefWidth="170.0" style="-fx-background-radius: 50;" />
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="16.0" prefWidth="326.0">
+                     <children>
+                        <VBox prefHeight="40.0" prefWidth="272.0">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <children>
+                              <CheckBox fx:id="saveBox" mnemonicParsing="false" text="Save Password" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="140.0" />
+                                 </VBox.margin>
+                              </CheckBox>
+                              <Label fx:id="errorText" textAlignment="CENTER" textFill="#e8d451">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font>
+                                 <VBox.margin>
+                                    <Insets left="50.0" />
+                                 </VBox.margin>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox alignment="TOP_CENTER" prefHeight="38.0" prefWidth="326.0">
+                     <children>
+                        <Button fx:id="loginBtn" mnemonicParsing="false" prefHeight="58.0" prefWidth="135.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #e4941b;" text="Log in" textFill="#734e17">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets top="50.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </right>
+         <center>
+            <VBox accessibleRole="IMAGE_VIEW" prefHeight="460.0" prefWidth="490.0" styleClass="vbox_background_center" stylesheets="@css/loginPage.css" BorderPane.alignment="CENTER">
+               <children>
+                  <HBox alignment="CENTER_LEFT" prefHeight="110.0" prefWidth="873.0">
+                     <children>
+                        <Button mnemonicParsing="false" prefHeight="74.0" prefWidth="150.0" style="-fx-background-radius: 50; -fx-background-radius: 50; -fx-background-color: black;" text="Cc" textFill="#f7f4f4">
+                           <font>
+                              <Font name="System Bold" size="24.0" />
+                           </font>
+                           <HBox.margin>
+                              <Insets right="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <ImageView fitHeight="123.0" fitWidth="107.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@imgs/a-removebg-preview.png" />
+                           </image>
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                        </ImageView>
+                        <Label prefHeight="87.0" prefWidth="182.0" text="Menu" textFill="#bf9246">
+                           <font>
+                              <Font name="Ebrima Bold" size="36.0" />
+                           </font>
+                        </Label>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="123.0" prefWidth="554.0">
+                           <children>
+                              <Button mnemonicParsing="false" prefHeight="78.0" prefWidth="190.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: transaprent;" text="Sign Up" textFill="WHITE">
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </Button>
+                              <Button mnemonicParsing="false" prefHeight="79.0" prefWidth="174.0" style="-fx-background-radius: 50; -fx-border-radius: 50; -fx-background-color: #e4941b;" text="Log in" textFill="#734e17">
+                                 <font>
+                                    <Font name="System Bold" size="36.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children></VBox>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

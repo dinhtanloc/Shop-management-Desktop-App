@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="618.0" prefWidth="881.0" styleClass="gradient-background" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.controllers.SatisticWindowController">
+      <children>
+          <Separator layoutY="47.0" prefHeight="14.0" prefWidth="888.0">
+         <padding>
+            <Insets top="10.0" />
+         </padding></Separator>
+      <HBox layoutX="-2.0" layoutY="361.0" prefHeight="228.0" prefWidth="871.0">
+         <children>
+            <HBox fx:id="hotpro_info" prefHeight="200.0" prefWidth="388.0" styleClass="box-info">
+               <children>
+                        <PieChart fx:id="pieChart" labelLineLength="12.0" prefHeight="223.0" prefWidth="392.0" styleClass="shadow" title="Top sp đạt doanh thu" />
+               </children>
+               <HBox.margin>
+                  <Insets left="50.0" right="25.0" />
+               </HBox.margin>
+            </HBox>
+            <HBox fx:id="sale_info" alignment="CENTER" prefHeight="200.0" prefWidth="383.0" styleClass="box-info">
+               <children>
+                        <BarChart fx:id="barChart" alternativeColumnFillVisible="true" barGap="0.0" legendVisible="false" prefHeight="223.0" prefWidth="290.0" styleClass="shadow" title="Thống kê KPI nhân viên">
+                            <xAxis>
+                                <CategoryAxis side="BOTTOM" />
+                            </xAxis>
+                            <yAxis>
+                                <NumberAxis side="LEFT" />
+                            </yAxis>
+                        </BarChart>
+               </children>
+            </HBox>
+         </children>
+         <padding>
+            <Insets top="5.0" />
+         </padding>
+      </HBox>
+      <HBox fx:id="rev_info" alignment="CENTER" layoutX="47.0" layoutY="83.0" prefHeight="267.0" prefWidth="798.0" styleClass="box-info" stylesheets="@css/style.css">
+         <children>
+            <LineChart fx:id="lineChart" alternativeColumnFillVisible="true" legendSide="TOP" legendVisible="false" prefHeight="252.0" prefWidth="620.0" styleClass="shadow" title="Doanh thu cửa hàng năm 2023">
+              <xAxis>
+                <CategoryAxis fx:id="categoryAxis" side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis fx:id="numberAxis" side="LEFT" />
+              </yAxis>
+            </LineChart>
+         </children>
+         <padding>
+            <Insets left="15.0" right="15.0" />
+         </padding>
+      </HBox>
+      <HBox layoutX="44.0" layoutY="14.0">
+         <children>
+            <HBox fx:id="iconClock" prefHeight="32.0" prefWidth="117.0" style="-fx-background-color: #f5b042;" styleClass="box-info" stylesheets="@css/des.css">
+               <children>
+                      <Label prefHeight="35.0" prefWidth="78.0" styleClass="label2" text="Inventory">
+                     <font>
+                        <Font name="System Bold" size="18.0" />
+                     </font>
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <ImageView fitHeight="32.0" fitWidth="46.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@imgs/date.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </HBox>
+            <HBox fx:id="Hbox_date" prefHeight="26.0" prefWidth="682.0">
+               <children>
+                  <HBox fx:id="box_from">
+                     <children>
+                        <Label fx:id="from" prefHeight="26.0" prefWidth="51.0" stylesheets="@css/style.css" text="From:">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="fromPicker" showWeekNumbers="true">
+                           <HBox.margin>
+                              <Insets right="75.0" />
+                           </HBox.margin>
+                        </DatePicker>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="box_to">
+                     <children>
+                        <Label fx:id="to" prefHeight="26.0" prefWidth="37.0" text="To:">
+                           <font>
+                              <Font name="System Bold Italic" size="14.0" />
+                           </font>
+                        </Label>
+                        <DatePicker fx:id="toPicker" showWeekNumbers="true" />
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      </children>
+   <stylesheets>
+      <URL value="@css/des.css" />
+      <URL value="@css/style.css" />
+   </stylesheets>
+  </AnchorPane>

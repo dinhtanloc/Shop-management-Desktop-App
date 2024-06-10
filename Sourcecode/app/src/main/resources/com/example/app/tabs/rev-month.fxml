@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane styleClass="gradient-background" stylesheets="@../css/style.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.controllers.tabs.RevenueMonthController">
+   <tabs>
+      <Tab closable="false" text="Revenue information">
+         <content>
+            <AnchorPane prefHeight="500.0" prefWidth="600.0">
+               <children>
+                  <TableView fx:id="RevTable" layoutX="23.0" layoutY="36.0" prefHeight="434.0" prefWidth="256.0" stylesheets="@../css/des.css" AnchorPane.bottomAnchor="30.400000000000034" AnchorPane.leftAnchor="23.0" AnchorPane.rightAnchor="329.79999999999995" AnchorPane.topAnchor="36.0">
+                    <columns>
+                      <TableColumn fx:id="Revtop" prefWidth="84.00006103515625" text="Top" />
+                      <TableColumn fx:id="Revcus" prefWidth="169.5999755859375" text="Customer" />
+                    </columns>
+                  </TableView>
+                  <VBox layoutX="292.0" layoutY="36.0" prefHeight="200.0" prefWidth="290.0" styleClass="box-info" stylesheets="@../css/style.css" AnchorPane.bottomAnchor="264.8" AnchorPane.leftAnchor="292.0" AnchorPane.rightAnchor="26.399999999999977" AnchorPane.topAnchor="36.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/revenue.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Revenue: ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="Rerev">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/staff.png" />
+                                 </image></ImageView>
+                              <Label text="Customer: ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="Recus">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/order.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Order: ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="Reor">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" layoutX="10.0" layoutY="144.0" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/products.png" />
+                                 </image>
+                              </ImageView>
+                              <Label text="Product: ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="Repro">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                           </children>
+                           <VBox.margin>
+                              <Insets />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <HBox layoutX="293.0" layoutY="258.0" prefHeight="214.0" prefWidth="315.0" AnchorPane.bottomAnchor="28.400000000000006" AnchorPane.leftAnchor="293.0" AnchorPane.rightAnchor="0.5999999999999659" AnchorPane.topAnchor="258.0">
+                     <children>
+                        <PieChart fx:id="pieChart" prefHeight="214.0" prefWidth="300.0" styleClass="box-info" />
+                     </children>
+                     <padding>
+                        <Insets right="25.0" />
+                     </padding></HBox>
+               </children>
+            </AnchorPane>
+         </content>
+      </Tab>
+   </tabs>
+</TabPane>

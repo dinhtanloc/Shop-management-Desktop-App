@@ -1,0 +1,445 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="618.0" prefWidth="881.0" styleClass="gradient-background" stylesheets="@css/des.css" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.controllers.EditOrderWindowController">
+   <children>
+      <BorderPane layoutX="257.0" layoutY="138.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="460.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <TabPane fx:id="tab" prefHeight="618.0" prefWidth="897.0" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+              <tabs>
+                  <Tab fx:id="PriceTab" text="Price">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                           <children>
+                              <TableView fx:id="Priceview" layoutX="19.0" layoutY="66.0" prefHeight="276.0" prefWidth="526.0">
+                                <columns>
+                                  <TableColumn fx:id="Price_ProID" prefWidth="75.0" text="Product ID" />
+                                  <TableColumn fx:id="Price_image" prefWidth="84.79998779296875" text="Image" />
+                                    <TableColumn fx:id="Price_type" prefWidth="74.39994812011719" text="Type" />
+                                    <TableColumn fx:id="Price_des" prefWidth="116.800048828125" text="Description" />
+                                    <TableColumn fx:id="Price_price" prefWidth="79.20001220703125" text="Price" />
+                                    <TableColumn fx:id="deleteCol" prefWidth="64.79998779296875" />
+                                </columns>
+                              </TableView>
+                              <HBox alignment="CENTER" layoutX="573.0" layoutY="71.0" prefHeight="263.0" prefWidth="247.0" styleClass="hbox" stylesheets="@css/style.css">
+                                 <children>
+                                    <ImageView fx:id="Price_imageview" blendMode="ADD" fitHeight="209.0" fitWidth="205.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@imgs/product.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                 </padding>
+                              </HBox>
+                              <Button fx:id="UpdateBtn_P" layoutX="650.0" layoutY="387.0" mnemonicParsing="false" prefHeight="35.0" prefWidth="106.0">
+                                 <graphic>
+                                    <HBox prefHeight="43.0" prefWidth="200.0">
+                                       <children>
+                                          <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@imgs/updateBtn.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="46.0" prefWidth="94.0" text="Update">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic></Button>
+                              <GridPane layoutX="126.0" layoutY="371.0" prefHeight="169.0" prefWidth="402.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.79998779296875" minWidth="10.0" prefWidth="104.0000244140625" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="561.7999954223633" minWidth="10.0" prefWidth="230.39997558593748" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="106.0" text="Price" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="Priceinput_P" prefHeight="42.0" prefWidth="172.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <Label alignment="CENTER" prefHeight="27.0" prefWidth="136.0" text="Description">
+                                       <font>
+                                          <Font name="System Bold" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="Desinput_P" prefHeight="42.0" prefWidth="172.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                                 </children>
+                              </GridPane>
+                              <HBox layoutX="559.0" layoutY="456.0" prefHeight="71.0" prefWidth="313.0">
+                                 <children>
+                                    <Button fx:id="hideButton" mnemonicParsing="false" prefHeight="13.0" prefWidth="95.0">
+                                       <HBox.margin>
+                                          <Insets left="20.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <HBox prefHeight="46.0" prefWidth="82.0">
+                                             <children>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@imgs/table.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label prefHeight="34.0" prefWidth="71.0" text="Add">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="P_editBtn" mnemonicParsing="false" prefHeight="13.0" prefWidth="95.0">
+                                       <HBox.margin>
+                                          <Insets left="70.0" />
+                                       </HBox.margin>
+                                       <graphic>
+                                          <HBox prefHeight="28.0" prefWidth="69.0">
+                                             <children>
+                                                <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                                   <image>
+                                                      <Image url="@imgs/edit.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label prefHeight="38.0" prefWidth="62.0" text="Edit">
+                                                   <font>
+                                                      <Font name="System Bold" size="18.0" />
+                                                   </font>
+                                                </Label>
+                                             </children>
+                                          </HBox>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <ComboBox fx:id="TypecomboBox_P" layoutX="734.0" layoutY="20.0" prefHeight="30.0" prefWidth="93.0" promptText="Type" styleClass="combo-box" stylesheets="@css/des.css" />
+                              <TextField fx:id="IDinput_P" layoutX="577.0" layoutY="17.0" prefHeight="36.0" prefWidth="97.0" promptText="ID Product" style="-fx-background-radius: 10;" />
+                              <Label layoutX="651.0" layoutY="347.0" text="Product Image">
+                                 <font>
+                                    <Font name="System Bold Italic" size="19.0" />
+                                 </font>
+                              </Label>
+                              <Label layoutX="213.0" layoutY="18.0" text="Danh mục sản phẩm">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font></Label>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+                <Tab fx:id="InventoryTab" text="Inventory">
+                     <content>
+                        <AnchorPane prefHeight="554.0" prefWidth="923.0">
+                           <children>
+                              <TableView fx:id="Inventview" layoutX="25.0" layoutY="69.0" prefHeight="286.0" prefWidth="522.0">
+                                <columns>
+                                  <TableColumn fx:id="Inventory_ID" prefWidth="68.79999160766602" text="Product ID" />
+                                  <TableColumn fx:id="Inventory_type" prefWidth="93.59994506835938" text="Type" />
+                                    <TableColumn fx:id="Inventory_des" prefWidth="159.9999237060547" text="Description" />
+                                    <TableColumn fx:id="Invent_unitcost" prefWidth="90.4000244140625" text="Unit cost" />
+                                    <TableColumn fx:id="Inventory_qty" prefWidth="84.79998779296875" text="Quantity" />
+                                </columns>
+                              </TableView>
+                              <HBox layoutX="578.0" layoutY="116.0" prefHeight="204.0" prefWidth="184.0" styleClass="hbox" stylesheets="@css/style.css">
+                                 <children>
+                                    <ImageView fx:id="Inventory_imageview" fitHeight="292.0" fitWidth="203.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@imgs/product.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                                 <padding>
+                                    <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                                 </padding>
+                              </HBox>
+                              <GridPane layoutX="143.0" layoutY="381.0" prefHeight="118.0" prefWidth="311.0">
+                                 <columnConstraints>
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="325.79998779296875" minWidth="10.0" prefWidth="95.99998168945312" />
+                                    <ColumnConstraints hgrow="SOMETIMES" maxWidth="561.7999954223633" minWidth="10.0" prefWidth="215.20001831054685" />
+                                 </columnConstraints>
+                                 <rowConstraints>
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                 </rowConstraints>
+                                 <children>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="110.0" text="Product ID">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="20.0" prefWidth="106.0" text="Quantity" GridPane.rowIndex="3">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="Qtyinput_I" prefHeight="42.0" prefWidth="172.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                                    <TextField fx:id="IDinput_I" prefHeight="42.0" prefWidth="172.0" style="-fx-background-radius: 10;" GridPane.columnIndex="1" />
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="94.0" text="Unit cost" GridPane.rowIndex="2">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font>
+                                    </Label>
+                                    <Label alignment="CENTER" prefHeight="18.0" prefWidth="93.0" text="Description" GridPane.rowIndex="1">
+                                       <font>
+                                          <Font name="System Bold" size="14.0" />
+                                       </font></Label>
+                                    <TextField fx:id="Desinput_I" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                                    <TextField fx:id="Unitinput_I" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                                 </children>
+                              </GridPane>
+                              <Label layoutX="624.0" layoutY="364.0" text="Product Image">
+                                 <font>
+                                    <Font name="System Bold Italic" size="23.0" />
+                                 </font>
+                              </Label>
+                              <Button fx:id="Update_Btn_I" layoutX="645.0" layoutY="401.0" mnemonicParsing="false" prefHeight="34.0" prefWidth="101.0">
+                                 <graphic>
+                                    <HBox prefHeight="35.0" prefWidth="77.0">
+                                       <children>
+                                          <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@imgs/updateBtn.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="46.0" prefWidth="94.0" text="Update">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic></Button>
+                              <ComboBox fx:id="categorybox_I" layoutX="737.0" layoutY="40.0" prefHeight="26.0" prefWidth="89.0" promptText="Type" />
+                              <HBox fx:id="exportBox" layoutX="186.0" layoutY="40.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <children>
+                                    <Label text="Bảng thống kê sản phẩm">
+                                       <font>
+                                          <Font name="System Bold Italic" size="18.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@imgs/export.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="checkBtn" layoutX="587.0" layoutY="40.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="84.0">
+                                 <graphic>
+                                    <HBox prefHeight="35.0" prefWidth="77.0">
+                                       <children>
+                                          <ImageView fitHeight="20.0" fitWidth="20.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@imgs/check.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="46.0" prefWidth="94.0" text="Check">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                     </content>
+                </Tab>
+                  <Tab fx:id="OrderlstTab" text="Oderlist">
+                    <content>
+                      <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="431.0" prefWidth="255.0">
+                           <children>
+                              <TableView fx:id="Orderview" layoutX="21.0" layoutY="134.0" prefHeight="222.0" prefWidth="478.0">
+                                <columns>
+                                  <TableColumn fx:id="Orderlst_ID" prefWidth="79.20001602172852" text="Product ID" />
+                                  <TableColumn fx:id="Orderlst_type" minWidth="0.0" prefWidth="60.0" text="Type" />
+                                    <TableColumn fx:id="Orderlst_des" minWidth="9.5999755859375" prefWidth="115.19999694824219" text="Description" />
+                                    <TableColumn fx:id="Orderlst_qty" minWidth="0.0" prefWidth="129.60003662109375" text="Quantity" />
+                                    <TableColumn fx:id="Orderlst_cost" minWidth="0.0" prefWidth="69.59991455078125" text="Unit Cost" />
+                                </columns>
+                              </TableView>
+                              <HBox layoutX="555.0" layoutY="138.0" prefHeight="214.0" prefWidth="297.0" style="-fx-border-color: #141411; -fx-border-radius: 10;" styleClass="hbox" stylesheets="@css/style.css">
+                                 <children>
+                                    <ListView fx:id="lstView" prefHeight="190.0" prefWidth="280.0">
+                                       <HBox.margin>
+                                          <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                                       </HBox.margin>
+                                    </ListView>
+                                 </children>
+                              </HBox>
+                              <HBox fx:id="exportOrderBox" layoutX="178.0" layoutY="95.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <children>
+                                    <Label text="List of orders">
+                                       <font>
+                                          <Font name="System Bold Italic" size="22.0" />
+                                       </font>
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin>
+                                    </Label>
+                                    <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                                       <image>
+                                          <Image url="@imgs/export.png" />
+                                       </image>
+                                    </ImageView>
+                                 </children>
+                              </HBox>
+                              <Label layoutX="656.0" layoutY="101.0" text="Create your order">
+                                 <font>
+                                    <Font name="System Bold Italic" size="14.0" />
+                                 </font></Label>
+                              <VBox layoutX="39.0" layoutY="23.0" prefHeight="88.0" prefWidth="442.0">
+                                 <children>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Time: " textFill="#fa5454">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="dateTime" text="null" textFill="#fa5454">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="2.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Total: ">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <Label fx:id="totalPrice" text="null">
+                                             <font>
+                                                <Font name="System Bold" size="14.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets top="2.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <VBox fx:id="vbox_check" layoutX="53.0" layoutY="393.0" prefHeight="116.0" prefWidth="447.0">
+                                 <children>
+                                    <HBox fx:id="box_up" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label prefHeight="26.0" prefWidth="132.0" text="Customer name: ">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                          </Label>
+                                          <TextField fx:id="nameField">
+                                             <HBox.margin>
+                                                <Insets right="40.0" />
+                                             </HBox.margin>
+                                          </TextField>
+                                          <ComboBox fx:id="Salercombobox" prefHeight="26.0" prefWidth="88.0" promptText="Saler" />
+                                       </children>
+                                    </HBox>
+                                    <HBox fx:id="box_down" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label text="Phone Number:  ">
+                                             <font>
+                                                <Font name="System Bold" size="16.0" />
+                                             </font>
+                                             <HBox.margin>
+                                                <Insets right="5.0" />
+                                             </HBox.margin>
+                                          </Label>
+                                          <TextField fx:id="phoneText" />
+                                       </children>
+                                    </HBox>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="okBtn" layoutX="584.0" layoutY="393.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="94.0">
+                                 <graphic>
+                                    <HBox prefHeight="35.0" prefWidth="77.0">
+                                       <children>
+                                          <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@imgs/accept.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="46.0" prefWidth="57.0" text="Accept">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="cancelBtn" layoutX="724.0" layoutY="393.0" mnemonicParsing="false" prefHeight="38.0" prefWidth="94.0">
+                                 <graphic>
+                                    <HBox prefHeight="35.0" prefWidth="77.0">
+                                       <children>
+                                          <ImageView fitHeight="30.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                             <image>
+                                                <Image url="@imgs/cancel.png" />
+                                             </image>
+                                          </ImageView>
+                                          <Label prefHeight="46.0" prefWidth="57.0" text="Cancel">
+                                             <font>
+                                                <Font name="System Bold Italic" size="14.0" />
+                                             </font>
+                                          </Label>
+                                       </children>
+                                    </HBox>
+                                 </graphic>
+                              </Button>
+                              <Label fx:id="warningText" layoutX="427.0" layoutY="515.0" textFill="#f21313">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </AnchorPane>
+                    </content>
+                  </Tab>
+              </tabs>
+            </TabPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

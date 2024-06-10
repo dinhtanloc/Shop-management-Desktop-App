@@ -1,0 +1,329 @@
+.side-bar-btn{
+    -fx-background-color:  #053730;
+    -fx-text-fill: #A7A7A7;
+
+}
+.gradient-background{
+    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #b2cd98,#606060);*/
+    -fx-background-color: #FFF4E9;
+}
+.label-side-bar{
+    -fx-text-fill: #A7A7A7;
+}
+.icon-side-bar{
+    -fx-fill: #A7A7A7;
+
+}
+/*.image1-view {*/
+/*     -fx-background-radius: 50;*/
+/*}*/
+
+.side-bar-btn:hover{
+    -fx-background-color: #cdd0cb;
+
+
+}
+.side-bar-btn:hover .label-side-bar{
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: White;
+    -fx-font-size: 22px;
+    -fx-font-weight: bold;
+    -fx-font: "Berlin Sans FB Demi", sans-serif;
+
+}
+/*.imageView{*/
+
+/*}*/
+
+
+/*.slide-bar-btn:hover .imageView{*/
+/*    !*-fx-opacity: 0.5;*!*/
+
+/*}*/
+
+.side-bar-btn:hover .icon-side-bar{
+    -fx-fill: White;
+}
+.side-bar-btn:selected .label-side-bar{
+    -fx-background-color: rgba(255, 255, 255, 0);
+    -fx-text-fill: White;
+    /*-fx-font-weight: bold;*/
+
+}
+.side-bar-btn:selected .icon-side-bar{
+    -fx-fill: White;
+}
+.side-bar-btn:selected{
+    -fx-background-color: rgba(255, 255, 255, 0.18);
+    /*-fx-font-weight: bold;*/
+    -fx-text-fill: white;
+}
+.shadow{
+    -fx-effect: dropShadow(three-pass-box,rgba(0,0,0,0.2),10.0,0.0,0.0,10.0);
+}
+.label1{
+    /* Chọn font family. Giả sử bạn sử dụng font "Open Sans" từ Google Fonts hoặc font nào đó bạn đã thêm vào dự án */
+    -fx-font-family: 'Berlin Sans FB Demi', Arial, sans-serif;
+
+    /* Chỉnh kích thước font */
+    -fx-font-size: 22px;
+
+    /* Chỉnh độ dày của chữ */
+    -fx-font-weight: bold ;
+
+    /* Chỉnh kiểu chữ (italic, normal) */
+    -fx-font-style: normal;
+
+    /* Màu sắc của chữ */
+    -fx-text-fill: #93891d;
+
+    /* Đây là phần thú vị: */
+    -fx-stroke: #49bb12; /* Màu viền của chữ */
+    -fx-stroke-width: 1.5px; /* Độ dày của viền chữ */
+
+
+    /* Khoảng cách giữa các chữ cái */
+    -fx-letter-spacing: 0.5px;
+
+    /* Thêm hiệu ứng bóng cho chữ */
+
+}
+.label2{
+    /* Chọn font family. Giả sử bạn sử dụng font "Open Sans" từ Google Fonts hoặc font nào đó bạn đã thêm vào dự án */
+    -fx-font-family: 'Berlin Sans FB Demi', Arial, sans-serif;
+
+    /* Chỉnh kích thước font */
+    -fx-font-size: 18px;
+
+    /* Chỉnh độ dày của chữ */
+    -fx-font-weight: bold ;
+
+    /* Chỉnh kiểu chữ (italic, normal) */
+    -fx-font-style: normal;
+
+    /* Màu sắc của chữ */
+    -fx-text-fill: #021f15;
+
+    /* Đây là phần thú vị: */
+    /*-fx-stroke: #49bb12; !* Màu viền của chữ *!*/
+    /*-fx-stroke-width: 1.5px; !* Độ dày của viền chữ *!*/
+
+
+    /* Khoảng cách giữa các chữ cái */
+    -fx-letter-spacing: 0.5px;
+
+    /* Thêm hiệu ứng bóng cho chữ */
+
+}
+.tab{
+    -fx-background-color: #54675C;
+    -fx-pref-height: 50;
+    -fx-pref-width: 287;
+    -fx-font-size: 20px; /* Điều chỉnh kích thước chữ cái theo nhu cầu */
+    -fx-font-weight: bold; /* Đặt font chữ in đậm (tuỳ chọn) */
+    -fx-padding: 0 10 10px 10; /* Khoảng cách dưới TabPane */
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /*border-bottom: 20px solid #ccc;*/
+}
+.tab-header-background{
+    -fx-background-color: #54675C ;
+}
+
+.tab:selected{
+    -fx-border-color: #d5eee0;
+    -fx-border-width: 0 0 3px 0;
+}
+
+/* Màu nền và màu chữ cho mỗi tab */
+/*.tab-pane .tab {*/
+/*    -fx-background-color: #ffcc66; !* Màu cam nhạt *!*/
+/*    -fx-text-fill: #333333; !* Màu chữ đậm *!*/
+/*}*/
+
+/* Màu nền và màu chữ cho tab đang được chọn */
+.tab:selected .tab-label {
+    /*-fx-background-color: #b5ea15; !* Màu cam *!*/
+    -fx-text-fill: #ffffff; /* Màu chữ trắng */
+    -fx-label-padding: 0,0,60px,0;
+
+
+}
+.tab-label {
+    -fx-font-family: 'Berlin Sans FB Demi', Arial, sans-serif;
+    /*-fx-text-fill: #0d5d07; !* Màu chữ trắng *!*/
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-label-padding: 0,0,20px,0;
+
+    /*-fx-label-padding: 20px ;*/
+}
+.table-view {
+    -fx-background-color: transparent;
+    -fx-border-color: #253d23;
+    -fx-border-radius: 10px;
+    -fx-table-cell-border-color: #c0ef1d;
+    -fx-padding: 5px;
+}
+
+.table-view .column-header-background {
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #ceb017, #d56f26);
+}
+
+.table-view .column-header, .table-view .column-header .text {
+    -fx-text-fill: white;
+    -fx-background-color: transparent
+}
+
+.table-row-cell:even {
+    -fx-background-color: transparent;
+    -fx-font-family: 'Times New Roman', Arial, sans-serif;
+    -fx-font-style: italic;
+    -fx-text-fill: white;
+    -fx-border-color: #075905;
+
+
+
+}
+.table-row-cell:odd{
+    -fx-background-color: transparent;
+    -fx-font-family: 'Times New Roman', Arial, sans-serif;
+    -fx-font-style: italic;
+    -fx-text-fill: white;
+    -fx-border-color: #075905;
+
+
+}
+
+.table-row-cell:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+
+.customButton {
+    -fx-background-color: linear-gradient(#ff7f50, #ff4500);
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20 10 20;
+    -fx-border-radius: 30;
+    -fx-border-width: 2px;
+    -fx-border-color: #ff6347;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.6), 10, 0, 0, 0);
+}
+
+.customButton:hover {
+    -fx-background-color: linear-gradient(#ff6347, #ff4500);
+}
+
+.customButton:pressed {
+    -fx-background-color: #ff4500;
+    -fx-translate-y: 2px;
+}
+
+.imageView{
+    -fx-background-color: linear-gradient(#ff7f50, #ff4500);
+    -fx-background-radius: 30;
+    -fx-text-fill: white;
+    -fx-font-size: 16px;
+    -fx-padding: 10 20 10 20;
+    -fx-border-radius: 30;
+    -fx-border-width: 2px;
+    -fx-border-color: #ff6347;
+    -fx-effect: dropshadow(three-pass-box, rgb(21, 145, 12), 10, 0, 0, 0);
+
+}
+.imageView:hover {
+    -fx-background-color: linear-gradient(#ff6347, #ff4500);
+}
+.imageView:pressed {
+    -fx-background-color: #ff4500;
+    -fx-translate-y: 2px;
+}
+
+.text-field {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #122312;
+    -fx-border-width: 0.75;
+    -fx-border-radius: 5;
+    -fx-text-fill: #ff0000;
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+.text-field:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.text-field:pressed {
+    -fx-background-color: #d0d0d0;
+}
+
+.combo-box {
+    /*-fx-background-color: #f0f0f0;*/
+    /*-fx-border-color: #edf6ed;*/
+    /*-fx-border-width: 2;*/
+    /*-fx-text-fill: #ff0000;*/
+    -fx-font-family: "Arial";
+    -fx-font-size: 14px;
+    -fx-font-weight: bold italic;
+
+}
+
+.combo-box .cell {
+    -fx-background-color: #FFF4E9;
+    -fx-text-fill: #333333;
+}
+
+.combo-box .cell:hover {
+    -fx-background-color: #a9c09e;
+}
+
+.combo-box .cell:selected {
+    -fx-background-color: #6d8577;
+
+    -fx-text-fill: white;
+}
+
+.combo-box .arrow-button {
+    -fx-background-color: #4a603d;
+}
+
+.combo-box .arrow {
+    -fx-background-color: #fff;
+}
+
+.combo-box:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.toggle1-button {
+    -fx-pref-width: 300px;
+    -fx-pref-height: 50px;
+    -fx-font-size: 16px; /* Điều chỉnh kích thước chữ cái theo nhu cầu */
+    -fx-font-weight: bold; /* Đặt font chữ in đậm */
+    -fx-content-display: top;
+    -fx-text-fill: #c9c7c7;
+    -fx-alignment: center;
+    -fx-background-color: #829168;
+    -fx-border-radius: 10px;
+}
+.toggle1-button:hover{
+    -fx-background-color: #7f837c;
+    -fx-text-fill: #e5d9d9;
+
+}
+.toggle1-button:selected{
+    -fx-font-size: 18px; /* Điều chỉnh kích thước chữ cái theo nhu cầu */
+    -fx-font-weight: bold; /* Đặt font chữ in đậm */
+    -fx-content-display: top;
+    -fx-text-fill: #f5f1f1;
+    -fx-alignment: center;
+    -fx-background-color: #d3dcd2;
+}
+
+
+
+

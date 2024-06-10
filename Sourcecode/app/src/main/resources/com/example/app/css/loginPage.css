@@ -1,0 +1,6 @@
+.vbox_background_center{
+    -fx-background-image:url("../imgs/background.png");
+}
+.vbox_background_right {
+    -fx-background-image: url("../imgs/c.png")
+}

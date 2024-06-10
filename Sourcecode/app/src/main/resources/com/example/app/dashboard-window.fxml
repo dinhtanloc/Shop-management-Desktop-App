@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="618.0" prefWidth="881.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.controllers.DashboardWindowController">
+   <children>
+      <TabPane layoutX="-1.0" prefHeight="626.0" prefWidth="884.0" styleClass="tab1-pane" stylesheets="@css/style.css" tabClosingPolicy="UNAVAILABLE">
+         <tabs>
+            <Tab closable="false" text="Today">
+               <content>
+                  <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="604.0" prefWidth="854.0" styleClass="gradient-background">
+                     <children>
+                        <HBox layoutX="1.0" layoutY="1.0" prefHeight="182.0" prefWidth="883.0">
+                           <children>
+                              <HBox alignment="CENTER_LEFT" prefHeight="146.0" prefWidth="358.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <HBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@imgs/revenue.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label styleClass="label1" text="Net revenue:">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin></Label>
+                                    <Label fx:id="netrev" styleClass="label2">
+                                       <HBox.margin>
+                                          <Insets top="4.0" />
+                                       </HBox.margin></Label>
+                                 </children>
+                              </HBox>
+                              <HBox prefHeight="146.0" prefWidth="358.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <children>
+                                    <VBox prefHeight="165.0" prefWidth="288.0">
+                                       <children>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@imgs/order.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label styleClass="label1" text="Order:">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin></Label>
+                                                <Label fx:id="qtyorder" styleClass="label2">
+                                                   <HBox.margin>
+                                                      <Insets top="4.0" />
+                                                   </HBox.margin></Label>
+                                             </children>
+                                          </HBox>
+                                          <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                             <children>
+                                                <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" right="5.0" />
+                                                   </HBox.margin>
+                                                   <image>
+                                                      <Image url="@imgs/category.png" />
+                                                   </image>
+                                                </ImageView>
+                                                <Label styleClass="label1" text="Category:">
+                                                   <HBox.margin>
+                                                      <Insets right="5.0" />
+                                                   </HBox.margin></Label>
+                                                <Label fx:id="qtyproduct" styleClass="label2">
+                                                   <HBox.margin>
+                                                      <Insets left="5.0" top="4.0" />
+                                                   </HBox.margin></Label>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox alignment="CENTER_LEFT" prefHeight="146.0" prefWidth="358.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                       <HBox.margin>
+                                          <Insets left="5.0" right="5.0" />
+                                       </HBox.margin>
+                                       <image>
+                                          <Image url="@imgs/products.png" />
+                                       </image>
+                                    </ImageView>
+                                    <Label styleClass="label1" text="Product: ">
+                                       <HBox.margin>
+                                          <Insets right="5.0" />
+                                       </HBox.margin></Label>
+                                    <Label fx:id="chargepro" styleClass="label2">
+                                       <HBox.margin>
+                                          <Insets top="4.0" />
+                                       </HBox.margin></Label>
+                                    <Label styleClass="label2" text="/">
+                                       <HBox.margin>
+                                          <Insets top="4.0" />
+                                       </HBox.margin></Label>
+                                    <Label fx:id="totalproduct" styleClass="label2">
+                                       <HBox.margin>
+                                          <Insets top="4.0" />
+                                       </HBox.margin></Label>
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="5.0" right="10.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="-2.0" layoutY="383.0" prefHeight="189.0" prefWidth="891.0">
+                           <children>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="184.0" prefWidth="274.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="label1" text="Activity" />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="87.0" prefWidth="270.0">
+                                             <children>
+                                                <HBox>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Revenue:" />
+                                                      <Label fx:id="rev" textFill="#222321">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets top="10.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Orders:" />
+                                                      <Label fx:id="ore">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="25.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Refunds:" />
+                                                      <Label fx:id="refund">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="5.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox layoutX="10.0" layoutY="10.0" prefHeight="184.0" prefWidth="274.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="266.0">
+                                       <children>
+                                          <Label styleClass="label1" text="Warehouse information " />
+                                       </children>
+                                       <VBox.margin>
+                                          <Insets left="5.0" />
+                                       </VBox.margin>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="89.0" prefWidth="269.0">
+                                             <children>
+                                                <HBox>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Storage:" />
+                                                      <Label fx:id="storage">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets top="7.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Shortage:" />
+                                                      <Label fx:id="shortage">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets top="5.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Soon:" />
+                                                      <Label fx:id="soon">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                             <HBox.margin>
+                                                <Insets left="5.0" />
+                                             </HBox.margin>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets left="15.0" right="15.0" />
+                                 </HBox.margin>
+                              </VBox>
+                              <VBox prefHeight="184.0" prefWidth="274.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <children>
+                                    <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <Label styleClass="label1" text="Employee management" />
+                                       </children>
+                                    </HBox>
+                                    <HBox prefHeight="100.0" prefWidth="200.0">
+                                       <children>
+                                          <VBox prefHeight="92.0" prefWidth="300.0">
+                                             <children>
+                                                <HBox>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Staff: " />
+                                                      <Label text="2">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets top="7.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Loc Dinh:  " />
+                                                      <Label fx:id="LocDinh">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                                <HBox>
+                                                   <VBox.margin>
+                                                      <Insets top="7.0" />
+                                                   </VBox.margin>
+                                                   <children>
+                                                      <Label styleClass="label2" text="Tuan Anh:" />
+                                                      <Label fx:id="TuanAnh">
+                                                         <font>
+                                                            <Font name="System Bold Italic" size="16.0" />
+                                                         </font>
+                                                         <HBox.margin>
+                                                            <Insets left="10.0" />
+                                                         </HBox.margin>
+                                                      </Label>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </HBox>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets right="15.0" />
+                                 </HBox.margin>
+                              </VBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="15.0" left="20.0" right="10.0" top="15.0" />
+                           </padding>
+                        </HBox>
+                        <HBox layoutX="2.0" layoutY="168.0" prefHeight="229.0" prefWidth="884.0">
+                           <children>
+                              <HBox prefHeight="227.0" prefWidth="430.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <children>
+                                    <LineChart fx:id="chartLine" alternativeColumnFillVisible="true" legendVisible="false" styleClass="shadow">
+                                      <xAxis>
+                                        <CategoryAxis endMargin="0.0" side="BOTTOM" startMargin="0.0" />
+                                      </xAxis>
+                                      <yAxis>
+                                        <NumberAxis side="LEFT" />
+                                      </yAxis>
+                                    </LineChart>
+                                 </children>
+                                 <HBox.margin>
+                                    <Insets bottom="15.0" left="15.0" top="15.0" />
+                                 </HBox.margin>
+                              </HBox>
+                              <HBox prefHeight="227.0" prefWidth="452.0" styleClass="box-info" stylesheets="@css/style.css">
+                                 <HBox.margin>
+                                    <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+                                 </HBox.margin>
+                                 <children>
+                                    <PieChart fx:id="pieChart" styleClass="shadow" title="Percentage of type" />
+                                 </children>
+                              </HBox>
+                           </children>
+                           <padding>
+                              <Insets bottom="5.0" left="5.0" right="10.0" top="5.0" />
+                           </padding>
+                        </HBox>
+                     </children>
+                     <stylesheets>
+                        <URL value="@css/style.css" />
+                        <URL value="@css/des.css" />
+                     </stylesheets>
+                  </AnchorPane>
+               </content>
+            </Tab>
+         </tabs>
+      </TabPane>
+   </children>
+</AnchorPane>

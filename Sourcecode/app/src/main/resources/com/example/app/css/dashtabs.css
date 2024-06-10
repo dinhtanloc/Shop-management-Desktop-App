@@ -1,0 +1,55 @@
+.tab{
+    -fx-background-color: #4ba829;
+    -fx-pref-height: 20;
+    -fx-pref-width: 150;
+    -fx-font-size: 14px; /* Điều chỉnh kích thước chữ cái theo nhu cầu */
+    -fx-font-weight: bold; /* Đặt font chữ in đậm (tuỳ chọn) */
+    -fx-padding: 0 10 10px 10; /* Khoảng cách dưới TabPane */
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    /*border-bottom: 20px solid #ccc;*/
+}
+.tab-header-background{
+    -fx-background-color: #4ba829 ;
+}
+
+.tab:selected{
+    -fx-border-color: #d5eee0;
+    -fx-border-width: 0 0 3px 0;
+}
+
+/* Màu nền và màu chữ cho mỗi tab */
+/*.tab-pane .tab {*/
+/*    -fx-background-color: #ffcc66; !* Màu cam nhạt *!*/
+/*    -fx-text-fill: #333333; !* Màu chữ đậm *!*/
+/*}*/
+
+/* Màu nền và màu chữ cho tab đang được chọn */
+.tab:selected .tab-label {
+    /*-fx-background-color: #b5ea15; !* Màu cam *!*/
+    -fx-text-fill: #ffffff; /* Màu chữ trắng */
+    -fx-label-padding: 0,0,14px,0;
+
+
+}
+.tab-label {
+    -fx-background-color: transparent;
+    -fx-border-width: 0;
+    -fx-label-padding: 14,0,14px,0;
+
+    /*-fx-label-padding: 20px ;*/
+}
+.gradient-background{
+    /*-fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #b2cd98,#606060);*/
+    -fx-background-color: linear-gradient(from 25% 25% to 100% 100%, #56a111,#96e6a1);
+}
+.box-info{
+    -fx-background-color: rgba(255,255,255,0.2);
+    -fx-background-radius: 10;
+}
+.box-info:hover{
+    -fx-background-color: #acc0a0;  // Màu nền khi di chuột qua
+-fx-border-color: #377E11FF;      // Màu viền khi di chuột qua
+}

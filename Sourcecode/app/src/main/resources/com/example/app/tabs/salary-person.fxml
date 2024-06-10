@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<TabPane prefHeight="550.0" prefWidth="600.0" styleClass="gradient-background" stylesheets="@../css/style.css" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.app.controllers.tabs.SalaryPersonController">
+  <tabs>
+    <Tab text="Employee activity information">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+               <children>
+                  <HBox layoutX="1.0" layoutY="275.0" prefHeight="165.0" prefWidth="600.0">
+                     <children>
+                        <TableView fx:id="staffTableViiew" prefHeight="218.0" prefWidth="583.0" stylesheets="@../css/des.css">
+                          <columns>
+                            <TableColumn fx:id="topCol" prefWidth="75.0" text="Top" />
+                            <TableColumn fx:id="nameCol" prefWidth="174.40003204345703" text="Name" />
+                              <TableColumn fx:id="orderCol" prefWidth="127.20002746582031" text="Order" />
+                              <TableColumn fx:id="profitCol" minWidth="0.0" prefWidth="172.7999267578125" text="Profit" />
+                          </columns>
+                        </TableView>
+                     </children>
+                     <padding>
+                        <Insets left="25.0" right="25.0" />
+                     </padding>
+                  </HBox>
+                  <HBox layoutX="304.0" layoutY="39.0" prefHeight="200.0" prefWidth="296.0" styleClass="shadow" stylesheets="@../css/des.css">
+                     <children>
+                        <PieChart fx:id="pieChart" legendVisible="false" />
+                     </children>
+                  </HBox>
+                  <VBox layoutX="27.0" layoutY="43.0" prefHeight="195.0" prefWidth="274.0" styleClass="box-info">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/employee.png" />
+                                 </image></ImageView>
+                              <Label text="Employee quantity: ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="quantityEmployee">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/staff.png" />
+                                 </image></ImageView>
+                              <Label text="Loc Dinh: ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="Locinfo">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="200.0">
+                           <children>
+                              <ImageView fitHeight="45.0" fitWidth="45.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../imgs/staff.png" />
+                                 </image></ImageView>
+                              <Label text="Tuan Anh: ">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font></Label>
+                              <Label fx:id="Anhinfo">
+                                 <font>
+                                    <Font name="System Bold Italic" size="16.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>
